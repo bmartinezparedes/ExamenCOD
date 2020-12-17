@@ -16,13 +16,13 @@ public class Main {
     }
 
     public static boolean conexion1(String u) {
-        UsuarioYdireccion usuario1 = new UsuarioYdireccion(u);
+        UsuarioYdireccion usuario1= UsuarioYdireccion.getInstance();
         System.out.println("Conectando a " + usuario1.ip + ", con el usuario " + u);
         return usuario1.con();
     }
 
     public static boolean conexion2() {
-        UsuarioYdireccion usuario2 = new UsuarioYdireccion();
+        UsuarioYdireccion usuario2 =  UsuarioYdireccion.getInstance();
         System.out.println("Conectando a " + usuario2.ip + ", con el usuario " + usuario2.usuario);
         return usuario2.con();
     }
