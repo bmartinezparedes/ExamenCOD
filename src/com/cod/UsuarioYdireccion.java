@@ -1,7 +1,9 @@
 package com.cod;
 
 public class UsuarioYdireccion {
-
+    /**
+     *
+     */
     private static UsuarioYdireccion instance=null;
     String usuario = "";
     String ip = "127.0.0.2";
@@ -14,6 +16,11 @@ public class UsuarioYdireccion {
     UsuarioYdireccion(String param1) {
         this.usuario = param1;
     }
+
+    /**
+     * Creo el Singleton
+     * @return
+     */
     public static UsuarioYdireccion getInstance() {
         //comprueba si ya esta creada
         if (instance == null) {
@@ -26,7 +33,11 @@ public class UsuarioYdireccion {
         return instance;
     }
 
-    public boolean con() {
+    /**
+     * compuebo si el usuario es aanonimo o no
+     * @return
+     */
+    public boolean comprovacionusuario() {
         if (usuario != "anonymous@danielcastelao.org") {
             return true;
         } else {
